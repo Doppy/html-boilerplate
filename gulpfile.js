@@ -33,6 +33,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const gulpSequence = require('gulp-sequence');
 const shell        = require('gulp-shell');
 const plumber      = require('gulp-plumber');
+const sourcemaps   = require('gulp-sourcemaps');
+
 
 /**
  * Task Browser Sync for reload browser
@@ -87,6 +89,7 @@ gulp.task('images-build', () => {
 
 gulp.task('scripts', () => {
   gulp.src(['app/scripts/src/**/*.js'])
+    .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(babel({
         presets: ['es2015']

@@ -10,3 +10,11 @@
 @import 'form/form';
 @import "layouts/layouts";
 @import "helpers/helpers";
+
+body, html {
+  padding: 0;
+}
+
+body {
+  background: rgba(241, 226, 215, 0.2);
+}
